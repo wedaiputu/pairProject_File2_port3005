@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENT I</title>
+    <%- include('_style.ejs') %>
+</head>
+<body>
+    <%- include('_navbar.ejs') %>
+   
+    <h1>Add Employee</h1>
+    <h3>Store Name : <%= result.name %> </h3>
+  
+    <% if (errors) { %>
+        <% errors.split(';').forEach((el) => { %>
+            <p style="color: red"><%= el %></p>
+        <% }) %>
+    <% } %>
+    <div class="containerForm">
+        <form action="" method="post">
+            <label>First Name </label><br>
+            <input type="text" name="firstName"><br>
+            <label>Last Name</label><br>
+            <input type="text" name="lastName"><br>
+            <label>Date of Birth</label><br>
+            <input type="date" name="dateOfBirth"><br>
+            <label>Education</label><br>
+            <select name="education">
+                <option disabled selected>Select Education</option>
+                <% const education= ["SMA","S1","S2","S3"] %>
+                <% education.forEach(element =>{ %>
+                    <option value="<%=element%>"><%=element%></option>
+                <% })%>
+            </select><br>
+            <p>Position:</p>
+            <% const position=["Staff","Supervisor","Manager","CEO"] %>
+            <% position.forEach(el => { %>
+                <input type="radio" name="position" value="<%=el%>">
+                <label><%=el%></label>
+            <% }) %>
+            <br>
+            <label>Salary</label><br>
+            <input type="number" name="salary"><br>
+            <button type="submit" value="add employee">Add Employee</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARS</title>
+    <%- include('_style.ejs') %>
+</head>
+<body>
+    <%- include('_navbar.ejs') %>
+    
+    <h1>Edit Units</h1>
+    <h3>Unit Name : <%= result.RentCar.name %> </h3>
+    <% if (errors) { %>
+        <% errors.split(';').forEach((el) => { %>
+            <p style="color: red"><%= el %></p>
+        <% }) %>
+    <% } %>
+    <div class="containerForm">
+        <form action="/" method="post">
+            <label>Name </label><br>
+            <input type="text" name="name" value="<%= result.name %>"><br>
+            <label>Type</label><br>
+            <input type="text" name="type" value="<%= result.type  %>"><br>
+            <label>releaseDate</label><br>
+            <input type="date" name="releaseDate" value="<%= formattedDate  %>"><br>
+            <label>durability</label><br>
+            <select name="durability">
+                <option disabled selected>Select Durability</option>
+                <% const durability= ["A","B","C","D"] %>
+                <% durability.forEach(element =>{ %>
+                    <option value="<%=element%>" <%= element == result.durability ? 'selected' : '' %>><%=element%></option>
+                <% })%>
+            </select><br>
+            <p>Rent Duration:</p>
+            <% const position=["Daily","Weekly","Monthly"] %>
+            <% position.forEach(el => { %>
+                <input type="radio" name="rentDuration" value="<%=el%>" <%= el == result.rentDuration ? 'checked' : '' %>>
+                <label><%=el%></label>
+            <% }) %>
+            <br>
+        
+                <label>Price</label><br>
+
+            <input type="number" name="price" value="<%=result.price %>"><br>
+            <button type="submit" value="edit unit">Edit UNITO</button>
+            
+        </form>
+    </div>
+</body>
+</html>

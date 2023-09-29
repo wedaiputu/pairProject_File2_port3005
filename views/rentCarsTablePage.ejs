@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORANG KAYA</title>
+    <br>
+    <%- include('_navbar.ejs') %>
+    <%- include('_style.ejs') %>
+   
+    
+</head>
+<body>
+  <div style="display: flex; justify-content: center;">
+    <h1 class="navbar-menu" class="text-3xl font-bold underline">
+        <a style="text-align: center; font-size: 34px;">BRANCH LIST</a>
+    </h1>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>BranchId</th>
+          <th>Office</th>
+          <th>Enterprise</th>
+          <th>Action</th>
+        </tr>
+
+        <% result.forEach(element => { %>
+        <tr>
+            <td><%=element.name%></td>
+            <td><%=element.branchId%></td>
+            <td><%=element.office%></td>
+            <td><%=element.enterprise%></td>
+            <td>
+                <a href="/rentCars/<%=element.id%>">see detail</a>
+            </td>
+        </tr>
+        <% }); %>
+      </table>
+</div>
+</body>
+</html>

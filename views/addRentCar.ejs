@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENT</title>
+    <%- include('_style.ejs') %>
+</head>
+<body>
+    <%- include('_navbar.ejs') %>
+    
+
+    <div class="containerForm">
+    <h1>Create New Store</h1>
+    <h3>Please fill the form below to add a new store </h3>
+    <form action="" method="post">
+        <label>INPUT NAME</label><br>
+        <input type="text" name="name"><br>
+        <label>LOCATION</label><br>
+        <input type="text" name="Branch"><br>
+        <p>SELECT FIRM TYPE</p>
+        <% const category=["CV","PT","ELSE"] %>
+        <% category.forEach(el => { %>
+            <input type="radio" name="category" value="<%=el%>">
+            <label><%=el%></label>
+        <% }) %>
+        <br>
+        <button type="submit" value="submit">Submit</button>
+      </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to left, rgb(200, 205, 206), #ffffff, #ffffff , #ffffff, #f5f0f0,#ffffff, #a7aaac);
+        margin: 0;
+        padding: 0;
+        display:flexbox;
+        justify-content: center;
+        align-items: center;
+        min-height: 120vh;
+    }
+
+    .container {
+        width: 400px;
+        padding-top: 100px;
+        padding: 20px;
+        background: linear-gradient(to bottom, rgb(244, 244, 246), #f4f5f2, #faf8f7);
+        box-shadow: 0px 10px 10px rgba(207, 216, 192, 0.2);
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 80%; 
+        padding: 20px;
+    }
+
+    .nameInput {
+        display: inline-block;
+        margin-right: 20px; 
+    }
+
+    .containerForm {
+    padding: 3% 0;
+    border: 3px solid #333;
+    background: linear-gradient(to left, rgb(184, 228, 228), #cadee9, #cadee9, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #cadee9, #cadee9, #b2d7e7);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .radio-group {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .radio-label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .radio-input {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .submit-button:hover {
+        background-color: #0056b3;
+    }
+
+
+
+    /* MEWARNAI TABEL   */
+
+    .table-container {
+    max-width: 80%; /* Adjust the width as needed */
+    overflow-x: auto;
+    margin-top: 20px;
+}
+    .table {
+        display: flexbox;
+        border-collapse: collapse;
+        margin: 20px auto;
+    }
+
+    .table {
+        display: flex; /* Use flexbox for horizontal alignment */
+        margin: 20px auto;
+    }
+
+    .table-cell {
+        flex: 1; /* Distribute available space equally */
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+    th {
+        background: linear-gradient(to bottom, rgb(140, 215, 215), #9ee5e5, #96cce2, #9ed4ec, #a0e2e2);
+
+    }
+    td {
+        background: linear-gradient(to left, rgb(237, 242, 243), #f8f8f8, #ffffff, #ffffff, #ffffff, #f9f9f7, #e4eeee);
+
+    }
+    .action{
+        display:flexbox;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: inline-block;
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="url"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #090000;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .buttonTop {
+        width: 2px;
+        height: 2px;
+        padding: 0px;
+        box-sizing: border-box;
+        border: 0;
+        background: red;
+    }
+
+
+
+        /* MEWARNAI NAVBAR EJS  */
+    .navbar-container {
+        border: 2px solid;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        padding: 10px;
+        height: 60px; 
+    }
+
+    .navbar-menu {
+        display: flex;
+        list-style-type: none; 
+        padding: 0; 
+        margin: 0; 
+    }
+
+    .navbar-menu a {
+        text-decoration: none; 
+        margin: 0 10px;
+        text-decoration: none;
+        margin: 0 10px;
+        font-family: Arial, sans-serif;
+        font-size: 28px;
+        color: #333;
+        transition: color 0.3s; 
+    }
+
+
+    .navbar-menu a:hover {
+        color: rgb(33, 14, 160);
+        text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    /* form add toko */
+    .containerForm {
+      text-align: center; 
+      margin-top: 20px; 
+    }
+    form {
+      display: inline-block; 
+      text-align: center;
+
+    }
+    .center-button {
+      text-align: center; 
+    }
+
+    /* @keyframes spin {  
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        
+        .navbar-menuSpin a:hover {
+            animation: spin 1s linear infinite; 
+        }
+    */
+
+
+
+    
+
+        
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+</style>

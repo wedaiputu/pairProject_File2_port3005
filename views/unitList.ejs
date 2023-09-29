@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT LIST</title>
+    
+    <%- include('_style.ejs') %>
+    </head>
+    <body>
+    <%- include('_navbar.ejs') %>
+    <div class="content-container">
+        <h1>Units List</h1>
+        <form action="" method="get">
+            <% const position=["Daily","Weekly","Monthly"] %>
+            <% position.forEach(el => { %>
+                <button type="submit" name="position" value="<%= el %>"><%= el %></button>
+            <% }) %>
+        </form>
+        <div class="table-container"> 
+            <table >
+                <tr>
+                    <th>Name</th>
+                    <th>type</th>
+                    <th>Office</th>
+                    <th>RentCarId</th>
+                    <th>Action</th>
+                </tr>
+                
+                <% result.forEach(element => { %>
+                <tr>
+                    <td><%=element.name%></td>
+                    <td><%=element.type%></td>
+                    <td><%=element.dataValues.formatPrice%></td>
+                    <td><%=element.RentCar.id%></td>
+                    <td>
+                        <a href="/rentCars/<%=element.RentCar.id%>/units/<%=element.id%>/edit">Edit</a>
+                        <a href="/rentCars/<%=element.RentCar.id%>/units/<%=element.id%>/delete">Delete</a>
+                    </td>
+                </tr>
+                <% }); %>
+            </table>
+            </div>
+    </div>
+</body>
+</html>

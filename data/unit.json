@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Ponda",
+      "type": "CityCar",
+      "releaseDate": "2022-05-15",
+      "durability": "A",
+      "rentDuration": "Monthly",
+      "RentCarId": 1,
+      "price": 40000000
+    },
+    {
+      "name": "Misibisi",
+      "type": "CityCar",
+      "releaseDate": "2020-01-15",
+      "durability": "A",
+      "rentDuration": "Monthly",
+      "RentCarId": 1,
+      "price": 24000000
+    },
+    {
+      "name": "Drof",
+      "type": "MiniBus",
+      "releaseDate": "2019-01-01",
+      "durability": "B",
+      "rentDuration": "Monthly",
+      "RentCarId": 1,
+      "price": 14000000
+    },
+    {
+      "name": "Punday",
+      "type": "Else",
+      "releaseDate": "2021-05-15",
+      "durability": "A",
+      "rentDuration": "Monthly",
+      "RentCarId": 1,
+      "price": 34000000
+    }
+  ]

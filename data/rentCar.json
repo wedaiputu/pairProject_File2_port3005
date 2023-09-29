@@ -1,0 +1,26 @@
+[
+    {
+        "name": "oneRent",
+        "branchId": "002-1631004259774",
+        "office": "Waingapu",
+        "enterprise": "CV"
+    },
+    {
+        "name": "twoRent",
+        "branchId": "001-1631004222274",
+        "office": "Tambolaka",
+        "enterprise": "CV"
+    },
+    {
+        "name": "keRent",
+        "branchId": "001-1121004259226",
+        "office": "Waikabubak",
+        "enterprise": "PT"
+    },
+    {
+        "name": "gakeRent",
+        "branchId": "002-1131004259714",
+        "office": "Naikolan",
+        "enterprise": "PT"
+    }
+  ]
